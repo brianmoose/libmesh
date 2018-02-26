@@ -32,11 +32,9 @@
 #pragma clang diagnostic ignored "-Wnested-anon-types"
 #pragma clang diagnostic ignored "-Wsign-compare"
 #pragma clang diagnostic ignored "-Wunused-private-field"
-#pragma clang diagnostic ignored "-Wsign-compare"
-#pragma clang diagnostic ignored "-Wextra"
-#if (__clang_major__ > 3) || ((__clang_major__) == 3 && (__clang_minor__ >= 5))
+#if (__clang_major__ > 3) || (__clang_major__ == 3 && __clang_minor__ > 5)
 #pragma clang diagnostic ignored "-Winconsistent-missing-override"
-#endif
+#endif // Clang > 3.5
 #endif
 
 #if defined(__GNUC__) && !defined(__INTEL_COMPILER) && !defined(__clang__)
